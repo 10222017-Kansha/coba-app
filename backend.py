@@ -4,8 +4,6 @@ import os
 import time
 import requests
 import subprocess
-import cv2
-import mediapipe as mp
 import gdown
 import numpy as np
 from sentence_transformers import SentenceTransformer
@@ -208,4 +206,5 @@ def generate_final_report_v2(input_payload, transcripts, scores, reasons):
         "reviewChecklistResult": {"project": [], "interviews": {"minScore": 0, "maxScore": 4, "scores": det_scores}},
         "Overall notes": overall_notes
     }
+
     return final
