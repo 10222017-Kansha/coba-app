@@ -1,4 +1,5 @@
 import streamlit as st
+import sys
 import json
 import os
 import base64
@@ -6,7 +7,10 @@ from pathlib import Path
 
 # --- IMPORT FUNGSI DARI BACKEND ---
 # Pastikan file backend.py ada di folder yang sama
-import backend 
+import backend
+
+
+st.write("Python version:", sys.version)
 
 # ==========================================
 # 0. FUNGSI UTILITAS GAMBAR
@@ -142,4 +146,5 @@ with col2:
             data=json_str,
             file_name="final_assessment_report.json",
             mime="application/json"
+
         )
